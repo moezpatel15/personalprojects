@@ -1,0 +1,51 @@
+Write a function called City_country () that takes in the name of city and its country 
+
+Program using compulsory Argument 
+def city_coutry(city_name , country_name):
+    full_name = city_name + " " + country_name
+    return full_name.title()
+
+names = city_coutry('Santiago' , 'Chili')
+print(names)
+
+Using Argument Option - correct method to write a program 
+def city_country2 (city_name , country_name , region = ''):
+
+    if region:
+        full_name = city_name + " " + country_name + " " + region
+    else:
+        full_name = city_name + country_name
+
+    return full_name.title()
+
+name = city_country2('Mumbai' ,'India' , 'Asia')
+print(name)
+
+Write a function called make_album() that builds a dictionary describing a music album 
+
+def make_album(artist_name, album_title , tracks = ''):
+    album = {'artist': artist_name, 'title': album_title}
+    if tracks:
+        album['tracks'] = tracks
+    return album
+
+album_name = make_album('Justin' ,'Purpose' , 'Sorry')
+print(album_name)
+
+def make_album(artist_name, album_title ):
+    album_name = artist_name + album_title
+    return  album_name.title()
+
+while True:
+    print("Please print artist name and tile")
+    print( " Press q anytime to quite ")
+
+    artist_first_name = input("First name : ")
+    if artist_first_name == 'q':
+        break
+    album_title_name = input("Albums title: ")
+    if album_title_name == 'q':
+        break
+
+    name = make_album(artist_first_name , album_title_name)
+    print( " \n Hello " + name + "" + "!")
